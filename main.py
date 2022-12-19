@@ -5,7 +5,8 @@
 # 3 - запись температуры в файл
 # 4 - чтение температуры из файла
 # 5 - вывод максимальной и минимальной температуры
-# 6 - и тд
+# 6 - Функция выводит количество "хороших" дней. Хорошие дни - температура в них лежит в каком то промежутке
+# Функция принимает на вход список и два числа(границы диапазона). Возвращает одно число - количество хороших днец
 # Q - выход, т.е. конец работы программы
 
 # file_functions - функции для работы с файлами, а именно чтение и запись
@@ -16,6 +17,7 @@ from Statistic import *
 from UI import *
 
 user_choise = ""
+temp = [23, 24, 26, 27, 26, 26, 24]
 while user_choise != 'Q':
     menu()
     user_choise = input()
@@ -26,3 +28,10 @@ while user_choise != 'Q':
         temp_output(temp, sep)
     if user_choise == "3":
         pass
+    if user_choise == "5":
+        print(get_info(temp))
+    if user_choise == "6":
+        lower_temp = float(input("Введите нижнюю границу температур"))
+        higher_temp = float(input("Введите верхнюю границу ввода"))
+        print(good_days(temp, lower_temp, higher_temp))
+
