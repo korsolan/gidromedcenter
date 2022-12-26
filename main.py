@@ -17,7 +17,7 @@ from Statistic import *
 from UI import *
 
 user_choise = ""
-temp = [23, 24, 26, 27, 26, 26, 24]
+temp = [23, 24, 26, 27, 26, 27, 24]
 while user_choise != 'Q':
     menu()
     user_choise = input()
@@ -34,4 +34,14 @@ while user_choise != 'Q':
         lower_temp = float(input("Введите нижнюю границу температур"))
         higher_temp = float(input("Введите верхнюю границу ввода"))
         print(good_days(temp, lower_temp, higher_temp))
+    if user_choise == "7":
+        print(frost(temp))
+    if user_choise == "8":
+        print(avr_week(temp))
+    if user_choise == "9":
+        print(temp_hole(temp))
+
+
+
+
 
