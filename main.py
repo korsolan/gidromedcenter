@@ -15,7 +15,9 @@
 # main - основная программа
 from Statistic import *
 from UI import *
-
+from file_work import *
+from intput_out import *
+from file_work import *
 user_choise = ""
 temp = [23, 24, 26, 27, 26, 27, 24]
 while user_choise != 'Q':
@@ -40,6 +42,10 @@ while user_choise != 'Q':
         print(avr_week(temp))
     if user_choise == "9":
         print(temp_hole(temp))
+    if user_choise == "3":
+        print("Запись данных в файл")
+    if user_choise == "4":
+        print(read_file(temp))
 
 
 

@@ -1,15 +1,3 @@
-def temp_input():
-    temp = []
-
-    for i in range(7):
-        number = float(input("Введи число"))
-        temp.append(number)
-    return temp
-
-def temp_output(list_temp, sep):
-    for i in range(len(list_temp)):
-        print(list_temp[i],sep, end= " ")
-
 def get_info(list_temp):
     min_temp = min(list_temp)
     max_temp = max(list_temp)
@@ -36,6 +24,12 @@ def temp_hole(list_temp):
         if list_temp[i - 1] > list_temp[i] < list_temp[i + 1]:
             count += 1
     return count
+
+
+
+
+
+
 
 
 
